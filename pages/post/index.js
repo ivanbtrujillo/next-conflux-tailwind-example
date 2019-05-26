@@ -5,19 +5,6 @@ import { PostContext } from "../../store/contexts";
 import "./post.css";
 
 /**
- * A dumb component that shows a post
- *
- * @param {*} { title, image, content }
- */
-const Post = ({ title, content, image }) => (
-  <div className="post">
-    <h1 className="title">{title}</h1>
-    <img src={image} className="image" width="20%" />
-    <p className="content"> {content}</p>
-  </div>
-);
-
-/**
  * A container which is able to use the PostContext due is a children
  * of PostPage.
  * Receives an id of a post, filters the posts in the application state
@@ -30,7 +17,11 @@ const PostContentContainer = ({ id }) => {
   const post = postState.posts.find(post => post.id == id);
 
   return post ? (
-    <Post {...post} />
+    <div className="post">
+      <h1 className="title">{post.title}</h1>
+      <img src={post.image} className="image" width="20%" />
+      <p className="content"> {post.content}</p>
+    </div>
   ) : (
     <div>
       <h1> Post not found </h1>

@@ -14,11 +14,9 @@ const WriterContainer = () => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [image, setImage] = useState("");
-  const [buttonStatus, setButtonStatus] = useState("normal");
 
   const savePost = () => {
     postDispatch(addPost({ title, content, image }));
-    setButtonStatus("saved");
     setTitle("");
     setContent("");
     setImage("");

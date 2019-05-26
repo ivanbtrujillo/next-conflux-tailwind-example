@@ -21,14 +21,6 @@
   @apply flex-1 p-4 mb-8 w-1/2 text-lg border-transparent;
 }
 
-.button-base {
-  @apply text-white w-1/2 h-8 text-lg cursor-pointer;
-}
-
-.button-primary {
-  @apply button-base bg-blue-800;
-}
-
 textarea:focus,
 input:focus {
   outline: none;

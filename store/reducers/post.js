@@ -1,4 +1,4 @@
-import { ADD_POST } from "../constants";
+import { ADD_POST, DELETE_POST } from "../constants";
 
 const initialState = {
   posts: [
@@ -29,6 +29,12 @@ const initialState = {
 };
 
 const getId = currentPosts => currentPosts[currentPosts.length - 1].id + 1;
+const getPostAfterRemove = (currentPosts, postIdToRemove) => {
+  const posts = [...currentPosts];
+  const postIndexToRemove = posts.findIndex(post => post.id === postIdToRemove);
+  posts.splice(postIndexToRemove, 1);
+  return posts;
+};
 
 const postReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -45,6 +51,12 @@ const postReducer = (state = initialState, action) => {
           ]
         ]
       };
+    case DELETE_POST: {
+      return {
+        ...state,
+        posts: [...getPostAfterRemove(state.posts, action.payload.id)]
+      };
+    }
     default:
       return state;
   }
@@ -55,4 +67,9 @@ const addPost = payload => ({
   payload
 });
 
-export { postReducer, addPost };
+const deletePost = payload => ({
+  type: DELETE_POST,
+  payload
+});
+
+export { postReducer, addPost, deletePost };

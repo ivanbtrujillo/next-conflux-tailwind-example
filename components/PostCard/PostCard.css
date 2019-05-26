@@ -1,5 +1,5 @@
 .post-link {
-  @apply no-underline w-3/12;
+  @apply no-underline w-full;
 }
 
 .post-item {
@@ -8,4 +8,8 @@
 
 .post-title {
   @apply h-12 bg-black font-semibold text-blue-600 text-lg flex items-center justify-start pl-2;
+}
+
+.card-wrapper {
+  @apply w-3/12 flex flex-col items-end;
 }

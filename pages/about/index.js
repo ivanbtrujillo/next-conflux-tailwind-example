@@ -1,6 +1,6 @@
 import Layout from "../../components/Layout/Layout";
 
-const About = () => (
+const AboutPage = () => (
   <Layout>
     <p>
       A simple demo of an app which uses Next.js, Conflux and TailwindCSS by
@@ -9,4 +9,4 @@ const About = () => (
   </Layout>
 );
 
-export default About;
+export default AboutPage;

@@ -9,3 +9,19 @@
 body {
   margin: 0px;
 }
+
+.button-base {
+  @apply text-white w-1/2 h-8 text-lg cursor-pointer;
+}
+
+.button-primary {
+  @apply button-base bg-blue-800;
+}
+
+.button-danger {
+  @apply button-base bg-red-800;
+}
+
+.button-danger-small-rounded {
+  @apply button-danger w-8 text-sm rounded-full;
+}

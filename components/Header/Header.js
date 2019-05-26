@@ -1,17 +1,18 @@
 import Link from "next/link";
+import routes from "../../routes";
 import "./Header.css";
+
+const HeaderLink = ({ link, name }) => (
+  <Link href={link}>
+    <a className="header-link"> {name} </a>
+  </Link>
+);
 
 const Header = () => (
   <div className="header">
-    <Link href="/">
-      <a className="header-link"> Home </a>
-    </Link>
-    <Link href="/writer">
-      <a className="header-link"> Write a post </a>
-    </Link>
-    <Link href="/about">
-      <a className="header-link"> About </a>
-    </Link>
+    {routes.map(({ link, name }) => (
+      <HeaderLink key={link} link={link} name={name} />
+    ))}
   </div>
 );
 
