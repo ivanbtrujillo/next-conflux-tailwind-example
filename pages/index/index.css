@@ -1,0 +1,11 @@
+.blog-title {
+  @apply text-2xl text-blue-900 ml-2;
+}
+
+.posts-list {
+  @apply flex flex-row w-full flex-wrap;
+}
+
+body {
+  margin: 0px;
+}

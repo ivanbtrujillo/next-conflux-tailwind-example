@@ -1,0 +1,42 @@
+.writer {
+  @apply flex flex-col items-center h-full;
+}
+
+.writer-title {
+  @apply font-bold;
+}
+
+.writer-input-base {
+  @apply p-4 w-1/2;
+}
+.writer-input {
+  @apply writer-input-base border-transparent text-2xl;
+}
+
+.writer-input-image {
+  @apply writer-input-base text-lg;
+}
+
+.writer-textarea {
+  @apply flex-1 p-4 mb-8 w-1/2 text-lg border-transparent;
+}
+
+.button-base {
+  @apply text-white w-1/2 h-8 text-lg cursor-pointer;
+}
+
+.button-primary {
+  @apply button-base bg-blue-800;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+button:disabled,
+button[disabled] {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}

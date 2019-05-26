@@ -1,0 +1,11 @@
+.post-link {
+  @apply no-underline w-3/12;
+}
+
+.post-item {
+  @apply cursor-pointer bg-gray-400 m-2 h-64  bg-cover bg-no-repeat flex flex-col justify-end;
+}
+
+.post-title {
+  @apply h-12 bg-black font-semibold text-blue-600 text-lg flex items-center justify-start pl-2;
+}

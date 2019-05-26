@@ -1,0 +1,8 @@
+.layout {
+  font-family: "Open Sans", sans-serif;
+  @apply h-screen flex flex-col;
+}
+
+.layout-content {
+  @apply p-4 flex-1;
+}

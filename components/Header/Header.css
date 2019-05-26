@@ -1,0 +1,11 @@
+.header {
+  @apply bg-gray-900 w-full h-12 flex items-center;
+}
+
+.header-link {
+  @apply text-white no-underline m-4;
+}
+
+.header-link:hover {
+  color: red;
+}

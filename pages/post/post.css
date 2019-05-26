@@ -1,0 +1,15 @@
+.post {
+  @apply flex flex-col items-center;
+}
+
+.title {
+  @apply text-5xl;
+}
+
+.image {
+  width: 300px;
+  object-fit: contain;
+}
+.content {
+  @apply leading-normal p-16;
+}
